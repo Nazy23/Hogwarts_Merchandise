@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-widthe, initial-scale1">
+  <title>Menu</title>
+  <link rel="icon" type="image/x-icon" href="icons/Logo.png">
+  <link rel="stylesheets" type="textcss" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/al.min.css">
+  <link rel="stylesheet" href="C:\Users\sorio\Documents\Folder Ni Naz\Menu css.css">
+  <!--css file -->
+  <link rel="stylesheet" type="text/css" href="2-menu.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+  
+<body>
+  <!-- header start -->
+  <header class ="header">
+    <!-- logo -->
+    <a href="1-index.html" class="logo">
+    <img src="Icons/Logo.png">
+    </a>
+      
+    <!-- nav bar start -->
+    <nav class="navbar">
+      <input type="checkbox" id="check">
+        <label for="check" class="check-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+      <ul>
+        <li><a href="1-index.html">Home</a></li>
+        <li><a class="active" href="2-menu.html">Menu</a></li>
+      </ul>
+    <!-- <div id="menu-btn" class=fas fa-bars"></div> -->
+    </nav>
+    <!-- nave bar end -->
+      
+      
+    <!-- hyperlink with icons (search, cart, profile, menu button) -->
+    <div class= "icons">
+    <div class="cart-container" onmouseover="showCartForm()" onmouseout="hideCartForm()">
+      <a href="4-cart.html">
+      <div class = "fas fa-shopping-cart" id="cartbutton"></div>
+      </a>
+        <div class="cart-form" id=cartForm>
+          <form>
+            <div id="cartItems"></div>
+            <div id="total-price">Total Price: ₱<span id="totalPrice">0.00<</span></div>
+          </form>
+        </div>
+    </div>
+    <!-- hyperlink with icons (search, cart, profile, menu buton) -->
+  </header>
+  <!-- header end -->
+        
+  <!-- Menu Section -->
+<section class="menu" id="menu">
+  <h1 class="heading">OUR <span>Menu </span></h1>
+  <p class="heading-description">Have you</p>
+          
+          
+  <div class="category-text"><h3>Wands</h3></div>
+          
+<div class="menu">
+  <div class="container menu-section">
+      <!-- Product 1 -->
+      <div class="menu-box">
+        <div class="menu-img">
+          <img src="Products/No BG/Frappe_mocha.png" alt="Frappe Mocha">
+        </div>
+        <div class="menu-content">
+          <h3>Frappe Mocha</h3>
+          <p> A delicious combination of chocolate and espresso creates a silky, delicious experience in the Frappe Mocha.</p>
+          <div onclick="addToCart('Frappe Mocha (Small)', 'P90.00', 'Products/No BG/frappe_mocha.png', 'item1-s'); return false;">
+            <button id="item1-s">Small <span>P90.00</span></button><!-- Small -->
+          </div>
+          <div onclick="addToCart('Frappe Mocha (Medium)', 'P100.00', 'Products/No BG/frappe_mocha.png', 'item1-m'); return false;">
+          <button id="item1-m">Medium <span>P100.00</span></button><!-- Medium -->
+          </div>
+          <div onclick="addToCart('Frappe Mocha (Large)', 'P120.00', 'Products/No BG/frappe_mocha.png', 'item1-l'); return false;">
+          <button id="item1-l">Large <span>P120.00</span></button><!-- Large -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="menu-box">
+        <div class="menu-img">
+          <img src="Products/No BG/Frappe_StrawberryVanilla.png" alt="Frappe_Strawberry-Vanilla">
+        </div>
+          <div class="menu-content">
+          <h3>Frappe Strawberry</h3>
+          <p> Masarap Frappe Starwberry dito</p>
+          <div onclick="addToCart('Frappe Strawberry (Small)', 'P90.00', 'Products/No BG/frappe_strawberry-Vanilla.png', 'item2-s'); return false;">
+            <button id="item2-s">Small <span>P90.00</span></button><!-- Small -->
+          </div>
+
+          <div onclick="addToCart('Frappe Strawberry (Medium)', 'P100.00', 'Products/No BG/frappe_strawberry-Vanilla.png', 'item2-m'); return false;">
+          <button id="item2-m">Medium <span>P100.00</span></button><!-- Medium -->
+          </div>
+
+          <div onclick="addToCart('Frappe Strawberry (Large)', 'P120.00', 'Products/No BG/frappe_strawberry-Vanilla.png', 'item2-l'); return false;">
+          <button id="item2-l">Large <span>P120.00</span></button><!-- Large -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="menu-box">
+        <div class="menu-img">
+          <img src="Products/No BG/Frappe VanillaMacadamia.png" alt="Frappe Vanilla-Macadamia">
+        </div>
+          <div class="menu-content">
+          <h3>Frappe Vanilla</h3>
+          <p> Masarap Frappe Vanilla Macadamia dito</p>
+          <div onclick="addToCart('Frappe Vanilla-Macadamia (Small)', 'P90.00', 'Products/No BG/frappe_strawberry-Vanilla.png', 'item3-s'); return false;">
+          <button id="item3-s">Small <span>P90.00</span></button><!-- Small -->
+          </div>
+
+          <div onclick="addToCart('Frappe Vanilla-Macadamia (Medium)', 'P100.00', 'Products/No BG/frappe_strawberry-Vanilla.png', 'item3-m'); return false;">
+          <button id="item3-m">Medium <span>P100.00</span></button><!-- Medium -->
+          </div>
+
+          <div onclick="addToCart('Frappe Vanilla-Macadamia (Large)', 'P120.00', 'Products/No BG/frappe_strawberry-Vanilla.png', 'item3-l'); return false;">
+          <button id="item3-l">Large <span>P120.00</span></button><!-- Large -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="menu-box" id="frappe-javachip">
+        <div class="menu-img">
+          <img src="Products/No BG/Frappe-Javachip.png" alt="Frappe Javachip">
+        </div>
+          <div class="menu-content">
+          <h3>Frappe Javachip</h3>
+          <p> Masarap Frappe Javachip dito</p>
+          <div onclick="addToCart('Frappe Javachip (Small)', 'P90.00', 'Products/No BG/Frappe-Javachip.png', 'item4-s'); return false;">
+          <button id="item4-s">Small <span>P90.00</span></button><!-- Small -->
+          </div>
+
+          <div onclick="addToCart('Frappe Javachip (Medium)', 'P100.00', 'Products/No BG/Frappe-Javachip.png', 'item4-m'); return false;">
+          <button id="item4-m">Medium <span>P100.00</span></button><!-- Medium -->
+          </div>
+
+          <div onclick="addToCart('Frappe Javachip (Large)', 'P120.00', 'Products/No BG/Frappe-Javachip.png', 'item4-l'); return false;">
+          <button id="item4-l">Large <span>P120.00</span></button><!-- Large -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more menu items here with the same structure -->
+    </div>     
+    
+      <div class="category-text"><h3>Books</h3></div>
+
+    <div class="container menu-section">
+      <!-- Product 1 -->
+      <div class="menu-box" id="iced-americano">
+        <div class="menu-img">
+          <img src="Products/No BG/iced_americano.png" alt="Iced Americanop">
+        </div>
+          <div class="menu-content">
+          <h3>Iced Americano</h3>
+          <p> Masarap Iced Americano dito</p>
+          <div onclick="addToCart('Iced Americano (Small)', 'P90.00', 'Products/No BG/iced_americano.png', 'item5-s'); return false;">
+          <button id="item5-s">Small <span>P90.00</span></button><!-- Small -->
+          </div>
+
+          <div onclick="addToCart('Iced Americano (Medium)', 'P100.00', 'Products/No BG/iced_americano.png', 'item5-m'); return false;">
+          <button id="item5-m">Medium <span>P100.00</span></button><!-- Medium -->
+          </div>
+
+          <div onclick="addToCart('Iced Americano (Large)', 'P120.00', 'Products/No BG/iced_americano.png', 'item5-l'); return false;">
+          <button id="item5-l">Large <span>P120.00</span></button><!-- Large -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="menu-box">
+        <div class="menu-img">
+          <img src="Products/No BG/iced_cafelatte.png" alt="Iced Cafelatte">
+        </div>
+          <div class="menu-content">
+          <h3>Iced Caffelatte</h3>
+          <p> Masarap Iced Caffelatte dito</p>
+          <div onclick="addToCart('Iced Cafelatte (Small)', 'P90.00', 'Products/No BG/iced_cafelatte.png', 'item6-s'); return false;">
+          <button id="item6-s">Small <span>P90.00</span></button><!-- Small -->
+          </div>
+
+          <div onclick="addToCart('Iced Cafelatte (Medium)', 'P100.00', 'Products/No BG/iced_cafelatte.png', 'item6-m'); return false;">
+          <button id="item6-m">Medium <span>P100.00</span></button><!-- Medium -->
+          </div>
+
+          <div onclick="addToCart('Iced Cafelatte (Large)', 'P120.00', 'Products/No BG/iced_cafelatte.png', 'item6-l'); return false;">
+          <button id="item6-l">Large <span>P120.00</span></button><!-- Large -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="menu-box">
+        <div class="menu-img">
+          <img src="Products/No BG/iced_cappuchino.png" alt="Iced Cappuchino">
+        </div>
+          <div class="menu-content">
+          <h3>Iced Cappuchino</h3>
+          <p> Masarap Iced Cappuchino dito</p>
+          <div onclick="addToCart('Iced Cappuchino (Small)', 'P90.00', 'Products/No BG/iced_cappuchino.png', 'item7-s'); return false;">
+          <button id="item7-s">Small <span>P90.00</span></button><!-- Small -->
+          </div>
+
+          <div onclick="addToCart('Iced Cappuchino (Medium)', 'P100.00', 'Products/No BG/iced_cappuchino.png', 'item7-m'); return false;">
+          <button id="item7-m">Medium <span>P100.00</span></button><!-- Medium -->
+          </div>
+
+          <div onclick="addToCart('Iced Cappuchino (Large)', 'P120.00', 'Products/No BG/iced_cappuchino.png', 'item7-l'); return false;">
+          <button id="item7-l">Large <span>P120.00</span></button><!-- Large -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="menu-box">
+        <div class="menu-img">
+          <img src="Products/No BG/iced_caramelatte.png" alt="ced CaramelatteI">
+        </div>
+          <div class="menu-content">
+          <h3>Iced Caramelatte</h3>
+          <p> Masarap Iced Caramelatte dito</p>
+          <div onclick="addToCart('Iced Caramelatte (Small)', 'P90.00', 'Products/No BG/iced_caramelatte.png', 'item7-s'); return false;">
+          <button id="item7-s">Small <span>P90.00</span></button><!-- Small -->
+          </div>
+
+          <div onclick="addToCart('Iced Caramelatte (Medium)', 'P100.00', 'Products/No BG/iced_caramelatte.png', 'item7-m'); return false;">
+          <button id="item7-m">Medium <span>P100.00</span></button><!-- Medium -->
+          </div>
+
+          <div onclick="addToCart('Iced Caramelatte (Large)', 'P120.00', 'Products/No BG/iced_caramelatte.png', 'item7-l'); return false;">
+          <button id="item7-l">Large <span>P120.00</span></button><!-- Large -->
+          </div>
+        </div>
+      </div>
+
+</section>
+  <!-- Menu Section End -->
+
+    <!-- Footer Start -->
+  <section class="footer">
+
+    <div class="container">
+      <div class="footer-box-1">
+        <h3>Contact Us</h3>
+        <div class+="footer-loc">
+          <a hreft="https://www.google.com/maps/place/TUP++College+of+Industrial+Technology/@14.5873937,120,9848474,17z/data=!3m1!4b1!4m5!3m5!1s0x3397cb93cd451575:0x6247d293ffefede0!8m2!3d24.5873937!4d120.9848474116s%2Fg%2F11hfq216nk?hl=en&entry-ttu" target=_blank>College of Industrial Technology, 668. TUP, Ermita, Manila, 1000</a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Newsletter</h3>
+          <p>Stay update with our latest</p>
+          <form>
+            <input type="email" name="email" placeholder="name@gmail.com">
+            <button type="submit"><i class="fa-solid fa-right-long"></i></button>
+          </form>
+        </div>
+
+        <div class="footer-box">
+          <h3>Contact Us</h3>
+          <p>Connect With Us On:</p>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- footer end -->
+        
+ </body>
+    
+  </html>
